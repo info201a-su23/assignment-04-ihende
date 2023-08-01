@@ -1,23 +1,15 @@
 ---
-title: "A3: Incarceration"
+title: "A4: Incarceration"
 output: html_document
 ---
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+For many decades, the United States has faced increasing amounts of disparities regarding the racial demographics in jails and prisons. Stricter government policies along with increased police presence in certain regions has led to the mass incarceration of Black, Latinx, APPI, etc. people. While this affects the demographics of jails and prisons, it also affects American society. This can influence what neighborhoods are policed more often and even who is targeted by the police. To better understand this issue, I will be observing and analyzing data sets to compare the total prison populations between White and Black Americans, as well as their difference in mean prison population per 100,000 people in various counties. These factors will also be compared over time, from 1990-2010.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+When investigating these data sets, the first value I wanted to find was the difference between the total White prison population and total Black prison population in 2010. This would give us the broadest overview of any racial disparities in the total prison population. The prison population of White Americans was **448,158** and for Black Americans it was **488,969**. This tells us that there is are **40,811** more Black Americans in prison than White Americans. While this gives us an idea of some sort of difference in the total prison population, the prison population *rate* is more telling of racial disparities due to differences in racial populations in the United States. I chose to find values that would compare the mean prison rate per 100,000 people across all counties between White and Black Americans, and then I chose to compare those numbers from 1990 to 2010. In 1990 White Americans had an average of **249.42** people in prison per 100,000 people, while Black Americans had an average of **2028.65** people in prison per 100,000 people. Immediately you can notice there is a large gap between the two groups. Jumping forward, I also calculated those statistics 20 years later in 2010. White Americans had a rate of **528.76**, while Black Americans had a rate of **3237.458**. This shows that even 2 decades later, the disparity still remains. 
 
 ### The Dataset
 
@@ -28,6 +20,7 @@ How many observations (rows) are in your data?
 How many features (columns) are in the data?  
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
 What are possible limitations or problems with this data?   (at least 200 words)
+
 
 
 ### Trends Over Time Chart
@@ -46,7 +39,7 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Variable Comparison Chart
