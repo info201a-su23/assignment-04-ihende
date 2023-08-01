@@ -13,15 +13,7 @@ When investigating these data sets, the first value I wanted to find was the dif
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
-
-
+The data used in this report was collected by the **Vera Institute**. According to their website, they do research and collect this data by working alongside community members and local organizations and government. They say that their mission is to is to end the overcriminalization and mass incarceration of people of color, immigrants, and people experiencing poverty. They do this work in order to develop an idea for how to disrupt the incarceration system and its devastating impacts. In the prison population and rate datasets there are **153,811 observations**. The total prison population dataset has **36 features** and the prison population rate dataset has **23 features**. Because this dataset deals with large numbers and widespread information regarding a historically systematic topic like race, there are some questions of power that need to be considered. For example, it is important to consider the identities of the individuals who collected this data as their own personal perspectives could affect what they did/didn't include. Additionally, one may want to consider who has control over this data and what may have been withheld or not reported as this can influence the accuracy of the reflections of the populations we are observing. This connects to limitations the data may have, including the many cells of unreported or "NA" data. This can cause issues with data accuracy and drawing valid conclusions from the data.
 
 ### Trends Over Time Chart
 
