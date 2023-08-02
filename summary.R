@@ -48,3 +48,4 @@ num_obs_pop <- nrow(prison_population)
 num_features_pop <- ncol(prison_population)
 num_obs_rate <- nrow(prison_rate)
 num_features_rate <- ncol(prison_rate)
+
