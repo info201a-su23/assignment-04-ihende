@@ -33,11 +33,8 @@ source("variable_comparison.R")
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+I included this map to create a easy-to-read visual that helps gauge various concentrations of Black prison population rates in the United States in 2010.
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
+```{r, echo = FALSE, code = readLines("map.R")}
+source("map.R")
+```
