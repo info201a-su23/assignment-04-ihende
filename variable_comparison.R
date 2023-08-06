@@ -1,8 +1,11 @@
 library(ggplot2)
+
+prison_population <- read.csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-pop.csv?raw=true")
 prison_rate <- read.csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-jail-rates.csv?raw=true")
 
-filter_years <- subset(prison_rate, year >= 1990 & year <= 2010)
+filter_year <- subset(prison_population, year == 2010)
+filtered_prison_population <- na.omit(filter_year)
 
-ggplot(filter_years, aes(x = year)) +
-  geom_line(aes(y = total_prison_pop_rate)) +
-  labs(title = "Total Prison Population Rates over Time", x = "Year", y = "Prison Population Rate")
+ggplot(filtered_prison_population, aes(x = black_prison_pop)) +
+ geom_point(aes(y = white_prison_pop)) +
+ labs(title = "Black vs. White Prison Population (2010)", x = "Black Prison Population", y = "White Prison Population")
