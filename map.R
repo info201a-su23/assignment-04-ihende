@@ -8,9 +8,8 @@ prison_rate <- read.csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main
   mutate(state = tolower(state))
 
 state_shape <- map_data("state") %>%
-  rename(state = region)
-
-prison_rate_state_shape <- left_join(state_shape, prison_rate, by = "state")
+  rename(state = region) %>%
+  left_join(prison_rate, by = "state")
 
 blank_theme <- theme_bw() +
   theme(
@@ -24,11 +23,12 @@ blank_theme <- theme_bw() +
     panel.border = element_blank()      
   )
 
-black_prison_rates_map <- ggplot(data = prison_rate_state_shape) +
-  geom_polygon(mapping = aes(x = long, y = lat, group = group, fill = black_prison_pop_rate)) +
+black_prison_rates_map <- ggplot(prison_rate_state_shape) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = black_prison_pop_rate)) +
+  coord_map() +
   scale_fill_continuous(low = "grey", high = "red") +
   labs(title = "Black Prison Rates in the USA (2010)", fill = "Prison Rate") + 
-  coord_map() +
   blank_theme
 
-black_prison_rates_map
+print(black_prison_rates_map)

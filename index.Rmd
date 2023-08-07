@@ -33,7 +33,7 @@ source("variable_comparison.R")
 
 ### Map
 
-I included this map to create a easy-to-read visual that helps gauge various concentrations of Black prison population rates in the United States in 2010.
+I included this map to create a easy-to-read visual that helps geographically gauge various concentrations of Black prison population rates in the United States in 2010.
 
 ```{r, echo = FALSE, code = readLines("map.R")}
 source("map.R")
