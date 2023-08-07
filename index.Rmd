@@ -5,7 +5,7 @@ output: html_document
 
 ### Introduction
 
-For many decades, the United States has faced increasing amounts of disparities regarding the racial demographics in jails and prisons. Stricter government policies along with increased police presence in certain regions has led to the mass incarceration of Black, Latinx, APPI, etc. people. While this affects the demographics of jails and prisons, it also affects American society. This can influence what neighborhoods are policed more often and even who is targeted by the police. To better understand this issue, I will be observing and analyzing data sets to compare the total prison populations between White and Black Americans, as well as their difference in mean prison population per 100,000 people in various counties. These factors will also be compared over time, from 1990-2010.
+For many decades, the United States has faced increasing amounts of disparities regarding the racial demographics in jails and prisons. Stricter government policies along with increased police presence in certain regions has led to the mass incarceration of Black, Latinx, AAPI, etc. people. While this affects the demographics of jails and prisons, it also affects American society. This can influence what neighborhoods are policed more often and even who is targeted by the police. To better understand this issue, I will be observing and analyzing data sets to compare the total prison populations between White and Black Americans, as well as their difference in mean prison population per 100,000 people in various counties. These factors will also be compared over time, between 1990 and 2010.
 
 ### Summary Information
 
@@ -17,7 +17,7 @@ The data used in this report was collected by the **Vera Institute**. According 
 
 ### Trends Over Time Chart
 
-This chart was designed to display a visual representation of the growth of the prison population since 1990. The color coded lines also indicate the Black and White proportional makeup of the prison population in that year. One prominent pattern that emerged was the significant growth of the overall prison population after 1991. Since then it has steadily risen and fallen. Another pattern that you can see regards the racial demographics of the population. Although both populations have grown over time, the consistent majority dominating the prison populations is Black Americans. This displays disparities in incarceration when it comes to race.
+This chart was designed to display a visual representation of the growth of the prison population since 1990. The color coded lines also indicate the Black and White proportional makeup of the prison population in that year. One prominent pattern that emerged was the significant growth of the overall prison population after 1991. Since then it has steadily risen and fallen. Another pattern that you can see regards the racial demographics of the population. Although both populations have grown over time, the consistent majority dominating the prison populations is Black Americans. This displays disparities in incarceration when it comes to race and indicates that they have been perpetuated over time.
 
 ```{r, echo = FALSE, code = readLines("time_trend.R")}
 source("time_trend.R")
@@ -25,7 +25,7 @@ source("time_trend.R")
 
 ### Variable Comparison Chart
 
-I included this chart to highlight disparities in Black and White Prison Populations in 2010 and visually display that data. Each dot is a location from the data set and it is placed on the graph wherever its corresponding Black and White prison population is. In a perfect world, the dots on the plot would be in a straight proportionate line from the bottom left to the top right. However, you can see on this plot when you study the scale and positioning of each dot that a majority of the points indicate a higher x-value (Black prison population) than y-value (White prison population). This shallowness of this plots' trend shows a disproportionate number of incarcerated Black Americans in an overwhelming majority of cities.
+I included this chart to highlight disparities in Black and White Prison Populations in 2010 and visually display that data. Each dot is a location from the data set and it is placed on the graph wherever its corresponding Black and White prison population is. In a perfect world, the dots on the plot would be in a straight proportionate line from the bottom left to the top right. However, you can see on this plot when you study the scale and positioning of each dot that a majority of the points indicate a higher x-value (Black prison population) than y-value (White prison population). The shallowness of this plots' trend shows a disproportionate number of incarcerated Black Americans in an overwhelming majority of cities.
 
 ```{r, echo = FALSE, code = readLines("variable_comparison.R")}
 source("variable_comparison.R")

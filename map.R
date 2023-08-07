@@ -23,7 +23,7 @@ blank_theme <- theme_bw() +
     panel.border = element_blank()      
   )
 
-black_prison_rates_map <- ggplot(prison_rate_state_shape) +
+black_prison_rates_map <- ggplot(state_shape) +
   geom_polygon(
     mapping = aes(x = long, y = lat, group = group, fill = black_prison_pop_rate)) +
   coord_map() +
