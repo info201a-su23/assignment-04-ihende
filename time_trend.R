@@ -1,11 +1,28 @@
 library(ggplot2)
-prison_population <- read.csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-pop.csv?raw=true")
-prison_rate <- read.csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-jail-rates.csv?raw=true")
+library(dplyr)
 
-filtered_prison_population <- na.omit(prison_population)
+prison_rate <- read.csv("https://raw.githubusercontent.com/melaniewalsh/Neat-Datasets/main/us-prison-jail-rates.csv")
 
-ggplot(filtered_prison_population, aes(x = year)) +
-  geom_line(aes(y = black_prison_pop, color = "Black")) +
-  geom_line(aes(y = white_prison_pop, color = "White")) +
-  labs(title = "Growth of Black vs. White Prison Population Over Time", x = "Year", y = "Prison Population", color = "Race")
+prison_rate_states <- prison_rate %>% 
+  na.omit() %>%
+  group_by(year) %>%
+  summarize(black_prison_rate = mean(black_prison_pop_rate), 
+            latinx_prison_rate = mean(latinx_prison_pop_rate),
+            white_prison_rate = mean(white_prison_pop_rate))
 
+line_chart <- ggplot() + 
+  geom_line(data = prison_rate_states, aes(x = year, 
+                                           y = black_prison_rate, 
+                                           color = "Black")) + 
+  geom_line(data = prison_rate_states, aes(x = year, 
+                                           y = latinx_prison_rate, 
+                                           color = "Latinx")) +
+  geom_line(data = prison_rate_states, aes(x = year, 
+                                           y = white_prison_rate, 
+                                           color = "White")) +
+  labs(x = "Year", 
+       y = "Population per 100,000 People (Rate)", 
+       color = "Race",
+       title = "Growth of Prison Population per 100,000 People by Race (1990-2018)") 
+
+print(line_chart)

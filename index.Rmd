@@ -17,24 +17,21 @@ The data used in this report was collected by the **Vera Institute**. According 
 
 ### Trends Over Time Chart
 
-This chart was designed to display a visual representation of the growth of the prison population since 1990. The color coded lines also indicate the Black and White proportional makeup of the prison population in that year. One prominent pattern that emerged was the significant growth of the overall prison population after 1991. Since then it has steadily risen and fallen. Another pattern that you can see regards the racial demographics of the population. Although both populations have grown over time, the consistent majority dominating the prison populations is Black Americans. This displays disparities in incarceration when it comes to race and indicates that they have been perpetuated over time.
+This chart was designed to display a time trend of the growth of the prison population per 100,000 people (rate) in the United States of three racial demographics from 1990-2018. It shows that there has been an overall growth in prison population rates of Black, Latinx, and White demographics over the time period. However, when comparing each line, we can observe that there is a stark difference in the rates themselves. The blue and green lines show that the White and Latinx populations share similar prison population rates over time, but the red line shows that Black populations consistently have a disproportionate and much higher prison population rate.
 
-```{r, echo = FALSE, code = readLines("time_trend.R")}
-source("time_trend.R")
+``````{r, echo = FALSE, code = readLines("time_trend.R"), message = FALSE}
 ```
 
 ### Variable Comparison Chart
 
-I included this chart to highlight disparities in Black and White Prison Populations in 2010 and visually display that data. Each dot is a location from the data set and it is placed on the graph wherever its corresponding Black and White prison population is. In a perfect world, the dots on the plot would be in a straight proportionate line from the bottom left to the top right. However, you can see on this plot when you study the scale and positioning of each dot that a majority of the points indicate a higher x-value (Black prison population) than y-value (White prison population). The shallowness of this plots' trend shows a disproportionate number of incarcerated Black Americans in an overwhelming majority of cities.
+I included this chart to compare Black and White Prison populations per 100,00 people (rates) in 2010 and visually display that data. Each dot represents a location from the data set and it is placed on the graph wherever its corresponding Black and White prison population rate is. In a perfect world, the dots on the plot would be in a straight proportionate line from the bottom left to the top right. However, you can see on this plot when you study the scale and positioning of each dot that a majority of the points indicate a higher x-value (Black prison population rate) than y-value (White prison population rate). The shallowness of this plots' trend indicates a disparity in the number of incarcerated Black Americans in an overwhelming majority of the cities in this dataset.
 
-```{r, echo = FALSE, code = readLines("variable_comparison.R")}
-source("variable_comparison.R")
+``````{r, echo = FALSE, code = readLines("variable_comparison.R"), message = FALSE}
 ```
 
 ### Map
 
-I included this map to create a easy-to-read visual that helps geographically gauge various concentrations of Black prison population rates in the United States in 2010.
+We observed in the previous visualizations the the Black prison population rate tends to be disproportionately higher than other demographics. To investigate this group further, I included a map that visualizes the average Black prison population rates per state across the United States in 2010. Using a color gradient, I used light purple to represent lower average prison population rates and dark blue to represent higher average prison population rates. With this visual I was able to recognize some states with significantly higher average Black prison population rates, which may help us make inferences about disproportionate policing or imprisonment inequalities in those locations. These states include Utah, New Mexico, Nebraska, New York, New Jersey, and New Hampshire.
 
-```{r, echo = FALSE, code = readLines("map.R")}
-source("map.R")
+``````{r, echo = FALSE, code = readLines("map.R"), message = FALSE}
 ```
